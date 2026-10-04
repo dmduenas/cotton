@@ -1,14 +1,36 @@
 #include <stdio.h>
-#define rows 2
-#define cols 3
-
 int main (void){
-    int data [rows][cols] = {{1, 2, 3}, {4, 5, 6}};
-    for (int i = 0; i < rows; i++){
-        for (int z = 0; z < cols; z++){
-            printf("%d", data[i][z]);
-        }
-        printf("\n");
-    }
+    char name[100];
+    char region[100];
+    char profession[100];
+    int age;
+    int unit;
+    char status[100];
 
+    FILE *fh_write;
+    fh_write = fopen("data.txt", "w");
+    printf("Enter Name: ");
+    fgets(name, sizeof(name), stdin);
+    printf("Enter Region: ");
+    fgets(region, sizeof(region), stdin);
+    printf("Enter Profession: ");
+    fgets(profession, sizeof(profession), stdin);
+    printf("Enter Age: ");
+    scanf("%d", &age);
+    printf("Enter Unit Number: ");
+    scanf("%d", &unit);
+    getchar();
+    printf("Enter Status: ");
+    fgets(status, sizeof(status), stdin);
+
+    fprintf(fh_write, "User Data\n\n");
+    fprintf(fh_write, "Name: %s", name);
+    fprintf(fh_write, "Region: %s", region);
+    fprintf(fh_write, "Profession: %s", profession);
+    fprintf(fh_write, "Age: %d\n", age);
+    fprintf(fh_write, "Unit: %d\n", unit);
+    fprintf(fh_write, "Status: %s", status);
+
+    fclose(fh_write);
+    return 0;
 }
