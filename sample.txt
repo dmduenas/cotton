@@ -1,0 +1,4 @@
+Python is useful
+File handling is important
+Python is beginner friendly
+Reading files is easy

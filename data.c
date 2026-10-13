@@ -2,6 +2,15 @@
 
 int main (void){
 
-    printf("Hello World\n");
-    return 0;
+    char name[200];
+    char age[200];
+    char sex[200];
+    char status[200];
+    char profession[200];
+
+    double team;
+    double control;
+
+    printf("Do not \n");
+    
 }
