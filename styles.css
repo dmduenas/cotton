@@ -1,0 +1,126 @@
+```css
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #101010;
+    color: #e8e4dc;
+    font-family: Georgia, "Times New Roman", serif;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    padding: 55px 7% 40px;
+    border-bottom: 1px solid #33302b;
+}
+
+header h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+header p {
+    margin-top: 12px;
+    color: #a49b8b;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* HORIZONTAL STORY ROADMAP */
+main {
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    padding: 45px 7% 60px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 7%;
+    scrollbar-color: #76684f #1b1b1b;
+    scrollbar-width: thin;
+}
+
+/* INDIVIDUAL STORY CARDS */
+.story {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    background-color: #191919;
+    border: 1px solid #302d28;
+    padding: 14px 14px 24px;
+    transition: border-color 0.3s ease;
+}
+
+.story:hover {
+    border-color: #a58a5a;
+}
+
+/* STORY IMAGES */
+.story img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #242321;
+    margin-bottom: 24px;
+}
+
+/* STORY TITLES */
+.story h2 {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0 0 14px;
+}
+
+/* RELEASE DATES */
+.story h3 {
+    color: #b49a6a;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+/* STORY DESCRIPTIONS */
+.story p {
+    color: #b5b0a7;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* MOBILE SCREEN */
+@media (max-width: 600px) {
+    header {
+        padding: 38px 6% 30px;
+    }
+
+    main {
+        gap: 18px;
+        padding: 30px 6% 45px;
+        scroll-padding-left: 6%;
+    }
+
+    .story {
+        flex-basis: 82vw;
+    }
+
+    .story img {
+        height: 210px;
+    }
+}
+```
