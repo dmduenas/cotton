@@ -123,4 +123,77 @@ main {
         height: 210px;
     }
 }
+
+
+/* STORY CONTENT TYPE LABELS */
+.story p:last-child {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 7px 12px;
+    color: #c4a875;
+    background-color: #242119;
+    border: 1px solid #51442e;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+
+/* STORY CARD LAYOUT */
+.story {
+    display: flex;
+    flex-direction: column;
+}
+
+/* STORY CONTENT TYPE LABELS */
+.story p:last-child {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 7px 12px;
+    color: #c4a875;
+    background-color: #242119;
+    border: 1px solid #51442e;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-left: auto
+}
+
+.story p:first-of-type {
+    margin-top: -8px;
+}
+
+
+/* CARD DEPTH */
+.story {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    transition: border-color 0.3s ease, transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* CARD HOVER */
+.story:hover {
+    border-color: #a58a5a;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* IMAGE TRANSITION */
+.story img {
+    transition: filter 0.4s ease;
+}
+
+.story:hover img {
+    filter: brightness(0.85);
+}
+
+
+
 ```
